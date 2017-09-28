@@ -1,0 +1,41 @@
+h1 {
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+li {
+	margin: 10px 10px;
+}
+
+button {
+	display: block;
+	font-size: 1.2em;
+	min-width: 100px;
+	border-radius: 5px;
+	margin: auto;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 10px 20px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px auto;
+}
+
+.answer {
+	width: 100%;
+	margin: 10px auto;
+}
