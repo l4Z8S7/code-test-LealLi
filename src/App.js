@@ -64,8 +64,8 @@ class App extends Component {
       <Question 
       index={this.state.currentIndex}
       totalIndex={this.state.data.length}
-      question={this.state.data[this.state.currentIndex]}
-      answer={this.state.answers[this.state.currentIndex]} 
+      question={this.state.data[index]}
+      answer={this.state.answers[index]} 
       prev={this.handlePrev} 
       next={this.handleNext} 
       />
