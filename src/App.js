@@ -42,10 +42,15 @@ class App extends Component {
   }
 
   renderComponent(index) {
-    if (index === -1) {
+    if (-1 < index < this.state.data.length) {
       return (
-        <Start 
-        next={() => this.setState({currentIndex: this.state.currentIndex + 1})} 
+        <Question 
+        index={this.state.currentIndex}
+        totalIndex={this.state.data.length}
+        question={this.state.data[index]}
+        answer={this.state.answers[index]} 
+        prev={this.handlePrev} 
+        next={this.handleNext} 
         />
       );
     }
@@ -61,13 +66,8 @@ class App extends Component {
       return <Result score={this._getScore()} />
     }
     return (
-      <Question 
-      index={this.state.currentIndex}
-      totalIndex={this.state.data.length}
-      question={this.state.data[index]}
-      answer={this.state.answers[index]} 
-      prev={this.handlePrev} 
-      next={this.handleNext} 
+      <Start 
+      next={() => this.setState({currentIndex: this.state.currentIndex + 1})} 
       />
     );
   }
